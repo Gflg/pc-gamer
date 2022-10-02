@@ -1,0 +1,74 @@
+<%= form_with model: @processor do |form| %>
+    <div>
+        <%= form.label :brand %>
+        <%= form.text_field :brand %>
+    </div>
+
+    <div>
+        <%= form.label :model %>
+        <%= form.text_field :model %>
+    </div>
+
+    <div>
+        <%= form.label :cores %>
+        <%= form.number_field :cores %>
+    </div>
+    <div>
+        <%= form.label :threads %>
+        <%= form.number_field :threads %>
+    </div>
+
+    <div>
+        <%= form.label :socket_type %>
+        <%= form.text_field :socket_type %>
+    </div>
+
+    <div>
+        <%= form.label :base_speed %>
+        <%= form.number_field :base_speed, step: :any %>
+    </div>
+
+    <div>
+        <%= form.label :turbo_speed %>
+        <%= form.number_field :turbo_speed, step: :any %>
+    </div>
+
+    <div>
+        <%= form.label :architechture %>
+        <%= form.text_field :architechture %>
+    </div>
+
+    <div>
+        <%= form.label :core_family %>
+        <%= form.text_field :core_family %>
+    </div>
+
+    <div>
+        <%= form.label :integrated_graphics %>
+        <%= form.text_field :integrated_graphics %>
+    </div>
+
+    <div>
+        <%= form.label :memory_type %>
+        <%= form.text_field :memory_type %>
+    </div>
+
+    <div>
+        <%= form.label :memory_frequency %>
+        <%= form.number_field :memory_frequency %>
+    </div>
+
+    <div>
+        <%= form.label :series %>
+        <%= form.text_field :series %>
+    </div>
+
+    <div>
+        <%= form.label :generation %>
+        <%= form.text_field :generation %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

@@ -1,0 +1,48 @@
+<h1>
+    <%= @processor.brand %>
+    <%= @processor.model %>
+</h1>
+
+<ul>
+    <li>
+        <%= "#{@processor.cores} cores"%>
+    </li>
+    <li>
+        <%= "#{@processor.threads} threads"%>
+    </li>
+    <li>
+        <%= "Socket type: #{@processor.socket_type}"%>
+    </li>
+    <li>
+        <%= "Base speed: #{@processor.base_speed} GHz"%>
+    </li>
+    <li>
+        <%= "Turbo speed: #{@processor.turbo_speed} GHz"%>
+    </li>
+    <li>
+        <%= "Architechture: #{@processor.architechture}"%>
+    </li>
+    <li>
+        <%= "Core family: #{@processor.core_family}"%>
+    </li>
+    <li>
+        <%= "Memory type: #{@processor.memory_type}"%>
+    </li>
+    <li>
+        <%= "Memory frequency: #{@processor.memory_frequency} MHz"%>
+    </li>
+    <li>
+        <%= "#{@processor.series} series"%>
+    </li>
+    <li>
+        <%= "Generation #{@processor.generation}"%>
+    </li>
+</ul>
+
+<div>
+  <%= link_to "Edit", edit_processor_path(@processor) %>
+  <%= link_to "Destroy", processor_path(@processor), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>

@@ -1,0 +1,9 @@
+<h1>Processors</h1>
+
+<ul>
+    <% @processors.each do |processor| %>
+        <li>
+            <%= link_to "#{processor.brand} #{processor.model}", processor %>
+        </li>
+    <% end %>
+</ul>
