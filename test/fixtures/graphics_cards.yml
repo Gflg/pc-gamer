@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  memory: 1
+  memory_interface: MyString
+  length: 1.5
+  interface: MyString
+  chipset: MyString
+  base_clock: 1
+  clock_speed: 1
+  frame_sync: MyString
+
+two:
+  brand: MyString
+  model: MyString
+  memory: 1
+  memory_interface: MyString
+  length: 1.5
+  interface: MyString
+  chipset: MyString
+  base_clock: 1
+  clock_speed: 1
+  frame_sync: MyString

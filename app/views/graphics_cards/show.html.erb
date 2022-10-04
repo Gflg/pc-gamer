@@ -1,0 +1,36 @@
+<h1>
+    <%= @graphics_card.brand %>
+    <%= @graphics_card.model %>
+</h1>
+
+<ul>
+    <li>
+        <%= "#{@graphics_card.memory} GB"%>
+    </li>
+    <li>
+        <%= "Memory interface: #{@graphics_card.memory_interface}"%>
+    </li>
+    <li>
+        <%= "Length: #{@graphics_card.length} mm"%>
+    </li>
+    <li>
+        <%= "Interface: #{@graphics_card.interface}"%>
+    </li>
+    <li>
+        <%= "Chipset: #{@graphics_card.chipset}"%>
+    </li>
+    <li>
+        <%= "Base clock: #{@graphics_card.base_clock} MHz"%>
+    </li>
+    <li>
+        <%= "Clock speed: #{@graphics_card.clock_speed} MHz"%>
+    </li>
+</ul>
+
+<div>
+  <%= link_to "Edit", edit_graphics_card_path(@graphics_card) %>
+  <%= link_to "Destroy", graphics_card_path(@graphics_card), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>

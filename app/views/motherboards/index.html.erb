@@ -1,0 +1,9 @@
+<h1>Motherboards</h1>
+
+<ul>
+    <% @motherboards.each do |motherboard| %>
+        <li>
+            <%= link_to "#{motherboard.brand} #{motherboard.model}", motherboard %>
+        </li>
+    <% end %>
+</ul>

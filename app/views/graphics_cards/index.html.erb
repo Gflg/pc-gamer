@@ -1,0 +1,9 @@
+<h1>Graphics Cards</h1>
+
+<ul>
+    <% @graphics_cards.each do |graphics_card| %>
+        <li>
+            <%= link_to "#{graphics_card.brand} #{graphics_card.model}", graphics_card %>
+        </li>
+    <% end %>
+</ul>

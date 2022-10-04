@@ -1,0 +1,49 @@
+<%= form_with model: @graphics_card do |form| %>
+    <div>
+        <%= form.label :brand %>
+        <%= form.text_field :brand %>
+    </div>
+
+    <div>
+        <%= form.label :model %>
+        <%= form.text_field :model %>
+    </div>
+
+    <div>
+        <%= form.label :memory %>
+        <%= form.number_field :memory %>
+    </div>
+
+    <div>
+        <%= form.label :memory_interface %>
+        <%= form.text_field :memory_interface %>
+    </div>
+
+    <div>
+        <%= form.label :length %>
+        <%= form.number_field :length, step: :any %>
+    </div>
+
+    <div>
+        <%= form.label :interface %>
+        <%= form.text_field :interface %>
+    </div>
+
+    <div>
+        <%= form.label :chipset %>
+        <%= form.text_field :chipset %>
+    </div>
+
+    <div>
+        <%= form.label :base_clock %>
+        <%= form.number_field :base_clock %>
+    </div>
+    <div>
+        <%= form.label :clock_speed %>
+        <%= form.number_field :clock_speed %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

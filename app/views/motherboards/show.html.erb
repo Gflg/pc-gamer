@@ -1,0 +1,30 @@
+<h1>
+    <%= @motherboard.brand %>
+    <%= @motherboard.model %>
+</h1>
+
+<ul>
+    <li>
+        <%= "Chipset: #{@motherboard.chipset}"%>
+    </li>
+    <li>
+        <%= "Form factor: #{@motherboard.chipset}"%>
+    </li>
+    <li>
+        <%= "Socket type: #{@motherboard.socket_type}"%>
+    </li>
+    <li>
+        <%= "#{@motherboard.memory_slots} memory slots"%>
+    </li>
+    <li>
+        <%= "Max memory support: #{@motherboard.max_memory_support} GB"%>
+    </li>
+</ul>
+
+<div>
+  <%= link_to "Edit", edit_motherboard_path(@motherboard) %>
+  <%= link_to "Destroy", motherboard_path(@motherboard), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>

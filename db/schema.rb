@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_02_161654) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_03_013117) do
+  create_table "graphics_cards", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.integer "memory"
+    t.string "memory_interface"
+    t.float "length"
+    t.string "interface"
+    t.string "chipset"
+    t.integer "base_clock"
+    t.integer "clock_speed"
+    t.string "frame_sync"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "motherboards", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.string "chipset"
+    t.string "form_factor"
+    t.string "socket_type"
+    t.integer "memory_slots"
+    t.integer "max_memory_support"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "processors", force: :cascade do |t|
     t.string "brand"
     t.string "model"

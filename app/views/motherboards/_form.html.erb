@@ -1,0 +1,39 @@
+<%= form_with model: @motherboard do |form| %>
+    <div>
+        <%= form.label :brand %>
+        <%= form.text_field :brand %>
+    </div>
+
+    <div>
+        <%= form.label :model %>
+        <%= form.text_field :model %>
+    </div>
+
+    <div>
+        <%= form.label :chipset %>
+        <%= form.text_field :chipset %>
+    </div>
+
+    <div>
+        <%= form.label :form_factor %>
+        <%= form.text_field :form_factor %>
+    </div>
+
+    <div>
+        <%= form.label :socket_type %>
+        <%= form.text_field :socket_type %>
+    </div>
+
+    <div>
+        <%= form.label :memory_slots %>
+        <%= form.number_field :memory_slots %>
+    </div>
+    <div>
+        <%= form.label :max_memory_support %>
+        <%= form.number_field :max_memory_support %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

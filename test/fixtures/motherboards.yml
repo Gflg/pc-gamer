@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  chipset: MyString
+  form_factor: MyString
+  socket_type: MyString
+  memory_slots: 1
+  max_memory_support: 1
+
+two:
+  brand: MyString
+  model: MyString
+  chipset: MyString
+  form_factor: MyString
+  socket_type: MyString
+  memory_slots: 1
+  max_memory_support: 1
