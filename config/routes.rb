@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'processors#index'
+  root 'pages#index'
 
   resources :processors
   resources :motherboards
