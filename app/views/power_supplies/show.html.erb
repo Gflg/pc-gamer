@@ -1,0 +1,24 @@
+<h1>
+    <%= @power_supply.brand %>
+    <%= @power_supply.model %>
+</h1>
+
+<ul>
+    <li>
+        <%= "#{@power_supply.power} W"%>
+    </li>
+    <li>
+        <%= "Efficiency: #{@power_supply.efficiency}"%>
+    </li>
+    <li>
+        <%= "Color: #{@power_supply.color}"%>
+    </li>
+</ul>
+
+<div>
+  <%= link_to "Edit", edit_power_supply_path(@power_supply) %>
+  <%= link_to "Destroy", power_supply_path(@power_supply), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>

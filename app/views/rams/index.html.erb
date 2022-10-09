@@ -1,0 +1,9 @@
+<h1>Rams</h1>
+
+<ul>
+    <% @rams.each do |ram| %>
+        <li>
+            <%= link_to "#{ram.brand} #{ram.model}", ram %>
+        </li>
+    <% end %>
+</ul>

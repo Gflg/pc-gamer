@@ -1,0 +1,30 @@
+<h1>
+    <%= @ram.brand %>
+    <%= @ram.model %>
+</h1>
+
+<ul>
+    <li>
+        <%= "#{@ram.size} GB"%>
+    </li>
+    <li>
+        <%= "RAM Type: #{@ram.ram_type}"%>
+    </li>
+    <li>
+        <%= "Speed: #{@ram.speed} MHz"%>
+    </li>
+    <li>
+        <%= "DIMM Type: #{@ram.dimm_type}"%>
+    </li>
+    <li>
+        <%= "CAS latency: #{@ram.cas_latency}"%>
+    </li>
+</ul>
+
+<div>
+  <%= link_to "Edit", edit_ram_path(@ram) %>
+  <%= link_to "Destroy", ram_path(@ram), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>

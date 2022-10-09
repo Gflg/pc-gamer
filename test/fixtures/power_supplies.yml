@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  power: 1
+  efficiency: MyString
+  color: MyString
+
+two:
+  brand: MyString
+  model: MyString
+  power: 1
+  efficiency: MyString
+  color: MyString

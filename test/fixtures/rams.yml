@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  size: 1
+  type: 
+  speed: 1
+  dimm_type: MyString
+  cas_latency: MyString
+
+two:
+  brand: MyString
+  model: MyString
+  size: 1
+  type: 
+  speed: 1
+  dimm_type: MyString
+  cas_latency: MyString

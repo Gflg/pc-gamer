@@ -1,0 +1,9 @@
+<h1>Power Supplies</h1>
+
+<ul>
+    <% @power_supplies.each do |power_supply| %>
+        <li>
+            <%= link_to "#{power_supply.brand} #{power_supply.model}", power_supply %>
+        </li>
+    <% end %>
+</ul>

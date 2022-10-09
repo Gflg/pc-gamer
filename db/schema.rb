@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_03_013117) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_09_174929) do
   create_table "graphics_cards", force: :cascade do |t|
     t.string "brand"
     t.string "model"
@@ -38,6 +38,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_03_013117) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "power_supplies", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.integer "power"
+    t.string "efficiency"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "processors", force: :cascade do |t|
     t.string "brand"
     t.string "model"
@@ -55,6 +65,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_03_013117) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "core_family"
+  end
+
+  create_table "rams", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.integer "size"
+    t.string "ram_type"
+    t.integer "speed"
+    t.string "dimm_type"
+    t.string "cas_latency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -12,9 +12,7 @@ class GraphicsCardsController < ApplicationController
   end
 
   def create
-    puts "Passei aqui 1"
     @graphics_card = GraphicsCard.new(graphics_card_params)
-    puts "Passei aqui 2"
 
     if @graphics_card.save
       redirect_to @graphics_card
@@ -24,9 +22,7 @@ class GraphicsCardsController < ApplicationController
   end
 
   def edit
-    puts "Passei aqui no edit"
     @graphics_card = GraphicsCard.find(params[:id])
-    puts @graphics_card
   end
 
   def update
