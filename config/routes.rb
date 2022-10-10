@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :graphics_cards
   resources :power_supplies
   resources :rams
+  resources :setups
 end

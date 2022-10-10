@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_174929) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_10_000156) do
   create_table "graphics_cards", force: :cascade do |t|
     t.string "brand"
     t.string "model"
@@ -79,4 +79,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_174929) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "setups", force: :cascade do |t|
+    t.string "name"
+    t.integer "processor_id", null: false
+    t.integer "motherboard_id", null: false
+    t.integer "graphics_card_id", null: false
+    t.integer "power_supply_id", null: false
+    t.integer "ram_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["graphics_card_id"], name: "index_setups_on_graphics_card_id"
+    t.index ["motherboard_id"], name: "index_setups_on_motherboard_id"
+    t.index ["power_supply_id"], name: "index_setups_on_power_supply_id"
+    t.index ["processor_id"], name: "index_setups_on_processor_id"
+    t.index ["ram_id"], name: "index_setups_on_ram_id"
+  end
+
+  add_foreign_key "setups", "graphics_cards"
+  add_foreign_key "setups", "motherboards"
+  add_foreign_key "setups", "power_supplies"
+  add_foreign_key "setups", "processors"
+  add_foreign_key "setups", "rams"
 end

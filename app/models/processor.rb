@@ -1,4 +1,6 @@
 class Processor < ApplicationRecord
+  has_many :setups
+
   validates :brand, presence: true
   validates :model, presence: true
   validates :cores, presence: true

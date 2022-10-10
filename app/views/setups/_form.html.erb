@@ -1,0 +1,35 @@
+<%= form_with model: @setup do |form| %>
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :processor_id %>
+        <%= form.collection_select :processor_id, Processor.all.map{|p| ["#{p.brand} #{p.model}", p.id] }, :second, :first %>
+    </div>
+
+    <div>
+        <%= form.label :motherboard_id %>
+        <%= form.collection_select :motherboard_id, Motherboard.all.map{|m| ["#{m.brand} #{m.model}", m.id] }, :second, :first %>
+    </div>
+
+    <div>
+        <%= form.label :graphics_card_id %>
+        <%= form.collection_select :graphics_card_id, GraphicsCard.all.map{|g| ["#{g.brand} #{g.model}", g.id] }, :second, :first %>
+    </div>
+
+    <div>
+        <%= form.label :power_supply_id %>
+        <%= form.collection_select :power_supply_id, PowerSupply.all.map{|p| ["#{p.brand} #{p.model}", p.id] }, :second, :first %>
+    </div>
+
+    <div>
+        <%= form.label :ram_id %>
+        <%= form.collection_select :ram_id, Ram.all.map{|r| ["#{r.brand} #{r.model}", r.id] }, :second, :first %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

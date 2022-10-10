@@ -1,4 +1,6 @@
 class Motherboard < ApplicationRecord
+  has_many :setups
+
   validates :brand, presence: true
   validates :model, presence: true
   validates :chipset, presence: true

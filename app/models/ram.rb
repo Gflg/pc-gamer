@@ -1,4 +1,6 @@
 class Ram < ApplicationRecord
+    has_many :setups
+
     validates :brand, presence: true
     validates :model, presence: true
     validates :size, presence: true

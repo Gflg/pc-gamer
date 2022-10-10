@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  processor: one
+  motherboard: one
+  graphics_card: one
+  power_supply: one
+  ram: one
+
+two:
+  name: MyString
+  processor: two
+  motherboard: two
+  graphics_card: two
+  power_supply: two
+  ram: two

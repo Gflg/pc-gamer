@@ -1,0 +1,32 @@
+<div>
+    <%= link_to "Back", setups_path() %>
+</div>
+
+<h1><%= @setup.name %></h1>
+
+<ul>
+    <li>
+        <%= "Processor: #{@setup.processor.brand} #{@setup.processor.model}"%>
+    </li>
+    <li>
+        <%= "Motherboard: #{@setup.motherboard.brand} #{@setup.motherboard.model}"%>
+    </li>
+    <li>
+        <%= "Graphics card: #{@setup.graphics_card.brand} #{@setup.graphics_card.model}"%>
+    </li>
+    <li>
+        <%= "Power supply: #{@setup.power_supply.brand} #{@setup.power_supply.model}"%>
+    </li>
+    <li>
+        <%= "RAM memory: #{@setup.ram.brand} #{@setup.ram.model}"%>
+    </li>
+</ul>
+
+
+<div>
+  <%= link_to "Edit", edit_setup_path(@setup) %>
+  <%= link_to "Destroy", setup_path(@setup), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+</div>

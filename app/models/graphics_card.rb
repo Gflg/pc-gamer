@@ -1,4 +1,6 @@
 class GraphicsCard < ApplicationRecord
+  has_many :setups
+
   validates :brand, presence: true
   validates :model, presence: true
   validates :memory, presence: true
