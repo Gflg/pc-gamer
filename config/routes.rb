@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "/find_processors" => "pages#processors"
+  get "/:processor/find_motherboards" => "pages#motherboards"
+  get "/:motherboard/find_rams" => "pages#rams"
+  get "/:ram/find_graphics_cards" => "pages#graphics_cards"
+  get "/:graphics_card/find_psus" => "pages#psus"
   root 'pages#index'
 
   resources :processors
