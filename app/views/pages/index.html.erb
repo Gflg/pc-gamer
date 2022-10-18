@@ -2,12 +2,38 @@
 
 <div class="block">
     <%= turbo_frame_tag "form" do %>
-        <%= form_tag root_path, method: :get, data: { controller: "dropdown" } do %>
-            <%= select_tag :processor, "", prompt: "- Please select -", data: { action: "change->dropdown#processor" } %>
-            <%= select_tag :motherboard, "", prompt: "- Motherboard -", data: { action: "change->dropdown#motherboard" } %>
-            <%= select_tag :ram, "", prompt: "- RAM Memory -", data: { action: "change->dropdown#ram" } %>
-            <%= select_tag :graphics_card, "", prompt: "- Graphics Card -", data: { action: "change->dropdown#graphics_card" } %>
-            <%= select_tag :psu, "", prompt: "- Power Supply -", data: { action: "change->dropdown#psu" } %>
+        <%= form_tag "/create_setup", method: :post, data: { controller: "dropdown" } do %>
+            <div>
+                <%= label_tag :name, "Nome:" %>
+                <%= text_field_tag :name %>
+            </div>
+
+            <div>
+                <%= label_tag :processor, "Processador:" %>
+                <%= select_tag :processor, "", prompt: "- Please select -", data: { action: "change->dropdown#processor" } %>
+            </div>
+
+            <div>
+                <%= label_tag :motherboard, "Placa mãe:" %>
+                <%= select_tag :motherboard, "", prompt: "- Motherboard -", data: { action: "change->dropdown#motherboard" } %>
+            </div>
+
+            <div>
+                <%= label_tag :ram, "Memória RAM:" %>
+                <%= select_tag :ram, "", prompt: "- RAM Memory -", data: { action: "change->dropdown#ram" } %>
+            </div>
+
+            <div>
+                <%= label_tag :graphics_card, "Placa de vídeo:" %>
+                <%= select_tag :graphics_card, "", prompt: "- Graphics Card -", data: { action: "change->dropdown#graphics_card" } %>
+            </div>
+
+            <div>
+                <%= label_tag :psu, "Fonte:" %>
+                <%= select_tag :psu, "", prompt: "- Power Supply -", data: { action: "change->dropdown#psu" } %>
+            </div>
+
+            <%= submit_tag("Create") %>
     <% end %>
 </div>
 
