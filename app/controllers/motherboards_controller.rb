@@ -7,6 +7,11 @@ class MotherboardsController < ApplicationController
     @motherboard = Motherboard.find(params[:id])
   end
 
+  def get_json
+    @motherboard = Motherboard.find(params[:id])
+    render json: @motherboard.to_json
+  end
+
   def new
     @motherboard = Motherboard.new
   end

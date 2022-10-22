@@ -13,9 +13,33 @@
                 <%= select_tag :processor, "", prompt: "- Please select -", data: { action: "change->dropdown#processor" } %>
             </div>
 
+            <div class="block mt-4 hidden" id="processor-container">
+                <strong id="processor-title"></strong>
+                <p id="processor-cores"></p>
+                <p id="processor-threads"></p>
+                <p id="processor-socket-type"></p>
+                <p id="processor-base-speed"></p>
+                <p id="processor-turbo-speed"></p>
+                <p id="processor-architechture"></p>
+                <p id="processor-core-family"></p>
+                <p id="processor-memory-type"></p>
+                <p id="processor-memory-frequency"></p>
+                <p id="processor-series"></p>
+                <p id="processor-generation"></p>
+            </div>
+
             <div>
                 <%= label_tag :motherboard, "Placa mãe:" %>
                 <%= select_tag :motherboard, "", prompt: "- Motherboard -", data: { action: "change->dropdown#motherboard" } %>
+            </div>
+
+            <div class="block mt-4 hidden" id="motherboard-container">
+                <strong id="motherboard-title"></strong>
+                <p id="motherboard-chipset"></p>
+                <p id="motherboard-form-factor"></p>
+                <p id="motherboard-socket-type"></p>
+                <p id="motherboard-memory-slots"></p>
+                <p id="motherboard-max-memory-support"></p>
             </div>
 
             <div>
@@ -23,9 +47,29 @@
                 <%= select_tag :ram, "", prompt: "- RAM Memory -", data: { action: "change->dropdown#ram" } %>
             </div>
 
+            <div class="block mt-4 hidden" id="ram-container">
+                <strong id="ram-title"></strong>
+                <p id="ram-size"></p>
+                <p id="ram-type"></p>
+                <p id="ram-speed"></p>
+                <p id="ram-dimm-type"></p>
+                <p id="ram-cas-latency"></p>
+            </div>
+
             <div>
                 <%= label_tag :graphics_card, "Placa de vídeo:" %>
                 <%= select_tag :graphics_card, "", prompt: "- Graphics Card -", data: { action: "change->dropdown#graphics_card" } %>
+            </div>
+
+            <div class="block mt-4 hidden" id="gpu-container">
+                <strong id="gpu-title"></strong>
+                <p id="gpu-memory"></p>
+                <p id="gpu-memory-interface"></p>
+                <p id="gpu-length"></p>
+                <p id="gpu-interface"></p>
+                <p id="gpu-chipset"></p>
+                <p id="gpu-base-clock"></p>
+                <p id="gpu-clock-speed"></p>
             </div>
 
             <div>
@@ -33,12 +77,19 @@
                 <%= select_tag :psu, "", prompt: "- Power Supply -", data: { action: "change->dropdown#psu" } %>
             </div>
 
+            <div class="block mt-4 hidden" id="psu-container">
+                <strong id="psu-title"></strong>
+                <p id="psu-power"></p>
+                <p id="psu-efficiency"></p>
+                <p id="psu-color"></p>
+            </div>
+
             <%= submit_tag("Create") %>
     <% end %>
 </div>
 
-<div class="block mt-4 hidden" id="message-container">
+<!--<div class="block mt-4 hidden" id="message-container">
     ✅ The <strong id="message"></strong> is a nice PC setup.
     <div class="mt-4"><%= link_to "Pick another", root_path, class: "text-blue-600 underline" %></div>
-</div>
+</div>-->
 <% end %>

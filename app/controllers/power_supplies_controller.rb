@@ -6,6 +6,11 @@ class PowerSuppliesController < ApplicationController
     def show
       @power_supply = PowerSupply.find(params[:id])
     end
+
+    def get_json
+      @power_supply = PowerSupply.find(params[:id])
+      render json: @power_supply.to_json
+    end
   
     def new
       @power_supply = PowerSupply.new

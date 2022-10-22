@@ -7,6 +7,11 @@ class GraphicsCardsController < ApplicationController
     @graphics_card = GraphicsCard.find(params[:id])
   end
 
+  def get_json
+    @graphics_card = GraphicsCard.find(params[:id])
+    render json: @graphics_card.to_json
+  end
+
   def new
     @graphics_card = GraphicsCard.new
   end

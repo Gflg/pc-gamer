@@ -7,6 +7,11 @@ class RamsController < ApplicationController
     @ram = Ram.find(params[:id])
   end
 
+  def get_json
+    @ram = Ram.find(params[:id])
+    render json: @ram.to_json
+  end
+
   def new
     @ram = Ram.new
   end

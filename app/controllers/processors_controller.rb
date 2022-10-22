@@ -7,6 +7,11 @@ class ProcessorsController < ApplicationController
     @processor = Processor.find(params[:id])
   end
 
+  def get_json
+    @processor = Processor.find(params[:id])
+    render json: @processor.to_json
+  end
+
   def new
     @processor = Processor.new
   end
